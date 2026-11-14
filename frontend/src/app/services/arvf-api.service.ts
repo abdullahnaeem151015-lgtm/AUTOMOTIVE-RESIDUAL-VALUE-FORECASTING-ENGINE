@@ -1,3 +1,4 @@
+import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 
 import {
@@ -55,7 +56,7 @@ export const AUTH_REQUEST_TIMEOUT_MS = 15000;
 export class ArvfApiService {
 
   private apiUrl =
-    'http://127.0.0.1:8001';
+    environment.apiUrl;
 
   private accessToken: string | null = null;
 
